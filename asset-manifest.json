@@ -1,6 +1,7 @@
 {
   "files": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "main.css": "/react_xexymix_clone/static/css/main.403cb300.css",
     "main.js": "/react_xexymix_clone/static/js/main.fa8ba191.js",
     "index.html": "/react_xexymix_clone/index.html",
@@ -11,6 +12,8 @@
     "static/css/main.403cb300.css",
     "static/js/main.fa8ba191.js"
 =======
+=======
+>>>>>>> parent of 806d05a (cm)
     "main.css": "/react_xexymix_clone/static/css/main.8e3342a0.css",
     "main.js": "/react_xexymix_clone/static/js/main.ce1dcd31.js",
     "static/media/banner_0.jpg": "/react_xexymix_clone/static/media/banner_0.87da58d3f1d99266c2bd.jpg",
