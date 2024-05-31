@@ -1,0 +1,121 @@
+/********************** footer **********************/
+#footer {
+  width: 100%;
+  margin-top: 100px;
+  border-top: 1px solid #999;
+  word-break: keep-all;
+}
+.footer {
+  color: #999;
+}
+.footer-inbox {
+  position: relative;
+  display: flex;
+}
+.footer a {
+  color: #999;
+}
+.footer-left {
+  flex-basis: 100%;
+  padding: 80px 0 0 0;
+}
+.footer-left-top a {
+  display: inline;
+}
+.footer-left-top span {
+  padding-left: 10px;
+  font-size: 14px;
+}
+.footer-left-menu {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-left-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-style: normal;
+}
+.info-box {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.info-box div {
+  display: inline-block;
+}
+.address-key-box {
+  padding-right: 3px;
+}
+.divide-bar {
+  width: 1px;
+  height: 9px;
+  margin: 6px 7px 0;
+  background: #a5a5a5;
+}
+.cr {
+  margin-top: 30px;
+}
+
+.footer-right {
+  padding-top: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.footer-right span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+.bank-info-box,
+.sns-box,
+.shop-menu-box {
+  padding-left: 15%;
+  white-space: nowrap;
+}
+
+.bank-info-box div {
+  margin-bottom: 5px;
+}
+.sns-icon {
+  display: flex;
+}
+.sns-icon div:nth-child(2) {
+  padding-left: 10px;
+}
+.sns-icon div:last-child {
+  padding-left: 14px;
+}
+.shop-menu-box div {
+  margin-bottom: 10px;
+}
+
+/******************************* 미디어쿼리 *******************************/
+@media screen and (max-width: 1439px) {
+  /* footer-right 미디어쿼리 */
+  .bank-info-box,
+  .sns-box,
+  .shop-menu-box {
+    padding-left: 5%;
+  }
+}
+@media screen and (max-width: 1239px) {
+  .footer-inbox {
+    flex-direction: column;
+  }
+}
+/**************** 모바일 미디어 쿼리 ****************/
+@media screen and (max-width: 767px) {
+  .footer-right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .bank-info-box,
+  .sns-box,
+  .shop-menu-box {
+    padding: 0;
+  }
+}

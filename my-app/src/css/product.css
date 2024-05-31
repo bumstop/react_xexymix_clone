@@ -1,0 +1,243 @@
+.product-container {
+  width: 1200px;
+  margin: 50px auto 75px;
+  box-sizing: border-box;
+}
+
+.product-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+
+.thumbnail-box {
+  flex-basis: 55%;
+  aspect-ratio: 1/1;
+}
+
+.thumbnail-box img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: 50% 0;
+  backdrop-filter: blur(500px);
+  -webkit-backdrop-filter: blur(500px);
+}
+.product-box {
+  flex-basis: 45%;
+}
+.product-tit-box {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+.product-name {
+  font-size: 30px;
+}
+
+.product-icon {
+  margin-top: 7px;
+  height: 18px;
+}
+.product-desc {
+  margin-top: 7px;
+  font-size: 15px;
+}
+.product-order-box {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.product-order-list {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  line-height: 45px;
+}
+.product-order-list span:first-child {
+  white-space: nowrap;
+  padding-right: 30px;
+}
+.price-right {
+  font-size: 18px;
+  font-weight: 600;
+}
+.price-right strike {
+  color: #aaa;
+  font-weight: 500;
+  padding-right: 10px;
+}
+.point-right {
+  font-size: 18px;
+}
+
+#select-product-option {
+  width: 80%;
+  text-align: right;
+  padding: 0 10px;
+}
+.fit-size-btn {
+  padding: 6px 24px;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #f6f6f6;
+  text-align: center;
+  font-size: 16px;
+}
+
+.product-ordered-box {
+  margin-top: 20px;
+  border-bottom: 2px solid #000;
+}
+.product-ordered-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-top: 1px solid #e5e5e5;
+  height: 50px;
+  font-size: 14px;
+}
+.option-name {
+  font-weight: 300;
+}
+
+.option-counter {
+  position: absolute;
+  right: 30%;
+  display: flex;
+  height: 33px;
+  font-weight: 300;
+  border: 1px solid #e5e5e5;
+}
+.minus-btn {
+  width: 33px;
+  border-right: 1px solid #e5e5e5;
+  background: url(../../public/images/ea_dw.gif) no-repeat center;
+}
+.plus-btn {
+  width: 33px;
+  border-left: 1px solid #e5e5e5;
+  background: url(../../public/images/ea_up.gif) no-repeat center;
+}
+.count-box {
+  width: 46px;
+}
+.count-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+.option-price {
+  position: absolute;
+  right: 5%;
+  font-weight: 600;
+}
+.product-close-btn {
+  position: absolute;
+  right: 0.5%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background: url(../../public/images/m_close_btn_black.png) center/cover no-repeat;
+}
+.total-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.product-btns {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  height: 65px;
+}
+.buy-btn {
+  flex-grow: 1;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  line-height: 65px;
+}
+.wish-btn {
+  flex-basis: 65px;
+  font-size: 24px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 65px;
+}
+
+/********************** 미디어 쿼리 **********************/
+@media screen and (max-width: 1239px) {
+  .product-container {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .product-container {
+    width: 750px;
+  }
+}
+
+/**************** 모바일 미디어 쿼리 ****************/
+@media screen and (max-width: 767px) {
+  .product-container {
+    width: 100%;
+  }
+  .product-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .thumbnail-box {
+    width: 70%;
+  }
+  .product-box {
+    width: 95%;
+  }
+  /* 여기글자크기부터 미디어쿼리 시작 */
+}
+
+@media screen and (max-width: 559px) {
+  .product-container {
+    margin-top: 0;
+  }
+  .thumbnail-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 399px) {
+  .product-name {
+    font-size: 25px;
+  }
+  .product-btns {
+    height: 50px;
+    gap: 15px;
+  }
+  .price-right {
+    font-size: 16.5px;
+  }
+  .fit-size-btn {
+    font-size: 14px;
+  }
+  .point-right {
+    font-size: 16.5px;
+}
+  .buy-btn {
+    line-height: 50px;
+  }
+  .wish-btn {
+    flex-basis: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+}

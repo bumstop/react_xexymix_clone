@@ -1,0 +1,206 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+.kakao-login-box {
+  width: 100%;
+}
+.kakao-login-box div:first-child {
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+.kakao-login-box div:nth-child(2) {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.kakao-login-btn {
+  position: relative;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0;
+  background-color: #fee500;
+  cursor: pointer;
+}
+.kakao-login-btn img{
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translate(0, -50%);
+  font-size: 24px;
+}
+.kakao_benefit {
+  width: 100%;
+  margin: 5px 0;
+}
+.kakao_benefit img {
+  width: 100%;
+}
+.divide-line {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+}
+.divide-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 45%;
+  height: 1px;
+  background-color: #ddd;
+}
+.divide-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 45%;
+  height: 1px;
+  background-color: #ddd;
+}
+.xexymix-login-box {
+  width: 100%;
+  margin-top: 10px;
+}
+.id-box-wrap {
+  position: relative;
+  height: 50px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#id-box {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 100;
+}
+.id-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  color: #666;
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: 0;
+  pointer-events: none;
+  transition: 0.1s linear;
+}
+.pwd-box-wrap {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#pwd-box {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 100;
+}
+.pwd-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  color: #666;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+  pointer-events: none;
+  transition: 0.1s linear;
+}
+.memorize-id-box {
+  height: 25px;
+  margin-top: 8px;
+}
+#memorize-id {
+  display: none;
+}
+#memorize-id + label {
+  display: inline-block;
+  padding-left: 10px;
+  height: 100%;
+  line-height: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+#memorize-id + label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-top;
+  margin-right: 8px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+#memorize-id:checked + label::before {
+  content: "✔";
+  background-color: #555;
+}
+.xexymix-login-btn {
+  position: relative;
+  padding: 15px 20px;
+  margin-top: 9px;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0;
+  background-color: #e5e5e5;
+}
+
+.login-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-top: 16px;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+/******************************* 미디어쿼리 *******************************/
+
+/******************************* 모바일 미디어쿼리 *******************************/
+@media screen and (max-width: 767px) {
+  .login-container {
+    width: 90%;
+  }
+  .divide-line::before {
+    width: 40%;
+  }
+  .divide-line::after {
+    width: 40%;
+  }
+}
+
+/* @media screen and (max-width: 559px) { 
+  .login-container {
+    width: 300px;
+  }
+} */

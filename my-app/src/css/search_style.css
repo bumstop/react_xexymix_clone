@@ -1,0 +1,150 @@
+/* 서치박스 컨테이너 */
+.search-head-container {
+  width: 100%;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  margin: 0 auto 25px;
+  background-color: #fafafa;
+}
+.search-head {
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-align: center;
+  word-break: keep-all;
+}
+.search-head .search-box-wrap {
+  width: 500px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+.search-head .search-box {
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+.search-head .search-btn {
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+
+/* 서치 정보 박스 */
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.item-count {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sort-box {
+  position: relative;
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sort-select {
+  width: 100px;
+  text-align: center;
+}
+.sort-appearance {
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.on .sort-appearance {
+  transform: rotate(-180deg);
+}
+.sort-option {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -0);
+  padding: 10px 15px 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  opacity: 0;
+}
+.on .sort-option {
+  opacity: 1;
+}
+.sort-option li {
+  padding-bottom: 10px;
+}
+
+/* 서치 아이템 컨테이너 */
+.search-item-container {
+  width: calc(100% - var(--page-padding) * 2);
+  max-width: calc(var(--page-max-width) - var(--page-padding) * 2);
+  margin: 0 auto 25px;
+  padding: 0 var(--page-padding);
+}
+
+.search-item-container .item-box-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: calc(4% / 4);
+  margin-bottom: 150px;
+}
+.search-item-container .item-box {
+  flex-basis: calc(96% / 5);
+}
+
+/********************** 미디어 쿼리 **********************/
+@media screen and (max-width: 1439px) {
+  .search-head .search-box-wrap {
+    width: 500px;
+  }
+  .search-item-container .item-box-wrap {
+    column-gap: calc(3% / 3);
+  }
+  .search-item-container .item-box {
+    flex-basis: calc(97% / 4);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .search-head .search-box-wrap {
+    width: 400px;
+  }
+  .search-item-container .item-box-wrap {
+    column-gap: calc(2% / 2);
+  }
+  .search-item-container .item-box {
+    flex-basis: calc(98% / 3);
+  }
+}
+
+/**************** 모바일 미디어 쿼리 ****************/
+@media screen and (max-width: 767px) {
+  .search-head .search-box-wrap {
+    width: 350px;
+  }
+  .search-item-container .item-box-wrap {
+    column-gap: calc(2% / 1);
+  }
+  .search-item-container .item-box {
+    flex-basis: calc(98% / 2);
+  }
+}
+@media screen and (max-width: 559px) {
+  .search-head-container {
+    width: 100%;
+    padding: 100px 25px;
+
+  }
+  .search-head .search-box-wrap {
+    width: 300px;
+  }
+}

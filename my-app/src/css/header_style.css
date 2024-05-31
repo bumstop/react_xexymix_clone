@@ -1,0 +1,453 @@
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+#header.non-top {
+  transform: translateY(-35px);
+}
+/* 탑 배너 */
+.top-banner {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  background: #000;
+}
+.top-banner a {
+  color: #fff;
+}
+
+/* GNB */
+.gnb-wrap {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 4px 5px #33333369;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+.non-top .gnb-wrap {
+  height: 70px;
+}
+.gnb {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+/* hamburger menu button */
+.hamburger {
+  position: relative;
+  margin-right: 2%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.petty {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.petty::before {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  content: "";
+  top: -8px;
+  transition: all 0.3s ease-in-out;
+}
+.petty::after {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  content: "";
+  bottom: -8px;
+  transition: all 0.5s ease-in-out;
+}
+.on .petty {
+  background-color: transparent;
+}
+.on .petty::before {
+  content: "";
+  top: 50%;
+  transform: translate(0, -50%) rotate(45deg);
+}
+.on .petty::after {
+  content: "";
+  top: 50%;
+  transform: translate(0, -50%) rotate(-45deg);
+}
+/* top-logo */
+.top-logo a {
+  display: block;
+}
+/* gnb-category */
+.gnb-category {
+  display: flex;
+  margin: 0 auto;
+}
+.gnb-category li {
+  padding: 0 30px;
+}
+.gnb-category a {
+  font-size: 15px;
+  font-weight: 400;
+  color: #111;
+}
+/* right-btn-wrap */
+.right-btn-wrap {
+  display: flex;
+  gap: 35px;
+}
+
+/* 서치 박스 */
+.close-btn {
+  position: absolute;
+  top: 35px;
+  right: 5%;
+  width: 25px;
+  height: 25px;
+  background: url(../../public/images/m_close_btn_black.png) no-repeat
+    center/cover;
+}
+
+/* 딤드 처리 */
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+}
+.dimmed.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-menu-wrap {
+  width: 100%;
+  height: 0;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+.search-menu-wrap.on {
+  height: 100vh;
+  border-top: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease-out, opacity 0.3s ease-out;
+}
+.search-menu {
+  position: relative;
+  height: 0;
+  padding: 15px 6%;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+}
+.on .search-menu {
+  height: 350px;
+  box-shadow: 0 4px 5px #33333369;
+  transition: height 0.3s ease-out;
+}
+
+.search-box-wrap {
+  position: relative;
+  margin: 20px auto;
+  width: 50%;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+.search-box {
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 600;
+}
+.search-btn {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0, -50%);
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: url(../../public/images/aside_search_btn.png) no-repeat
+    center/cover;
+  opacity: 0;
+}
+.on .search-btn {
+  opacity: 1;
+}
+.popular-search {
+  width: 50%;
+  margin: 0 auto;
+}
+.hashtag-box-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashtag-box {
+  width: auto;
+  font-size: 15px;
+  padding: 5px 7px;
+  margin: 0 7px 10px 0;
+  background-color: #f3f3f3;
+}
+.hashtag-box::before {
+  content: "# ";
+}
+.hashtag-box:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* 드롭다운 메뉴 박스 */
+.dropdown-menu-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+.dropdown-menu-wrap.on {
+  height: 100vh;
+  border-top: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease-out, opacity 0.3s ease-out;
+}
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding: 50px 6%;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+}
+.on .dropdown-menu {
+  height: 450px;
+  box-shadow: 0 4px 5px #33333369;
+  transition: 0.3s ease-out;
+}
+
+.dropdown-category {
+  display: flex;
+}
+.dropdown-category > li {
+  padding-left: 75px;
+}
+.dropdown-category > li:first-child {
+  padding-left: 0;
+}
+.category-head {
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.category-sub {
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dropdown-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dropdown-banner img {
+  width: 100%;
+  height: 100%;
+}
+/********************** 미디어 쿼리 **********************/
+@media screen and (max-width: 1439px) {
+  /* 드롭다운 메뉴 미디어쿼리 */
+  .dropdown-category > li {
+    padding-left: 55px;
+  }
+  .category-head {
+    font-size: 16px;
+  }
+  .category-sub {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .dropdown-category > li {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 939px) {
+  .gnb-category > li {
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+}
+/**************** 모바일 미디어 쿼리 ****************/
+@media screen and (max-width: 767px) {
+  /* GNB */
+  .gnb-wrap {
+    box-shadow: 0 2px 3px #33333369;
+  }
+  .gnb {
+    position: relative;
+    display: block;
+  }
+
+  /* hamburger */
+  .hamburger {
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 22px;
+  }
+
+  /* top-logo */
+  .top-logo {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+  /* right-btn-wrap */
+  .right-btn-wrap {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 3%;
+    top: 25%;
+    transform: translateY(-50%);
+  }
+
+  /* gnb-category */
+  .gnb-category {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    transition: all 0.5s ease;
+  }
+  .gnb-category li {
+    padding: 0;
+    flex-grow: 1;
+    flex-basis: 20%;
+    text-align: center;
+    background-color: #333;
+    border-right: 1px solid #555;
+    box-sizing: border-box;
+  }
+  .gnb-category li:last-child {
+    border-right: none;
+  }
+  .gnb-category a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .non-top .gnb-category {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  /* 서치 박스 */
+  .close-btn {
+    top: 15px;
+    right: 2.5%;
+    width: 20px;
+    height: 20px;
+  }
+  .search-box-wrap {
+    width: 85%;
+  }
+  .search-btn {
+    width: 25px;
+    height: 25px;
+  }
+  .popular-search {
+    width: 85%;
+  }
+
+  /* 드롭다운 메뉴 박스 */
+  .dropdown-menu-wrap {
+    position: absolute;
+    height: calc(100vh - 70px);
+    visibility: hidden;
+  }
+  .dropdown-menu-wrap.on {
+    height: calc(100vh - 70px);
+    border-top: none;
+    visibility: visible;
+    transition: 0.3s ease-out ;
+  }
+  .dropdown-menu {
+    position: absolute;
+    left: -100%;
+    width: 86%;
+    height: calc(100vh - 70px);
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .on .dropdown-menu {
+    left: 0;
+    height: calc(100vh - 70px);
+    padding: 50px 6% 100px;
+  }
+  .dropdown-category {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .dropdown-category > li {
+    flex-basis: 120px;
+  }
+  .dropdown-category > li:first-child {
+    padding-left: 30px;
+  }
+  .dropdown-banner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 399px) {
+  .right-btn-wrap {
+    gap: 7px;
+  }
+}
