@@ -5,10 +5,11 @@ import { useState } from "react";
 export function KakaoLogout() {
   const userInfo = localStorage.userInfo ? localStorage.getItem("userInfo") : undefined;
   const accessToken = userInfo ? JSON.parse(userInfo).accessToken : undefined;
-  const ORIGINAL_URL = new URL(window.location.href).origin;
   const REST_API_KEY = process.env.REACT_APP_KAKAO_API_KEY;
-  // const REDIRECT_URI = ORIGINAL_URL;
+
+  // const REDIRECT_URI = "http://localhost:3000"; // 빌드시 아래와 스위치 할것
   const REDIRECT_URI = "https://bumstop.github.io/react_xexymix_clone/";
+  
   const CLIENT_ID_PARAMS = `client_id=${REST_API_KEY}`;
   const REDIRECT_URI_PARAMS = `logout_redirect_uri=${REDIRECT_URI}`;
   const kakaoURL = `https://kauth.kakao.com/oauth/logout?${CLIENT_ID_PARAMS}&${REDIRECT_URI_PARAMS}`;
@@ -51,10 +52,12 @@ export function KakaoLogout() {
   };
 
   return (
-    <a className="logout-btn" href={kakaoURL}>로그아웃</a>
-    // <div className="logout-btn" onClick={endTokenRequest}>
+    // <a className="logout-btn" href={kakaoURL}>
     //   로그아웃
-    // </div>
+    // </a>
+    <div className="logout-btn" onClick={endTokenRequest}>
+      로그아웃
+    </div>
   );
 }
 
