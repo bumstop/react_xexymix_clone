@@ -7,8 +7,8 @@ export function KakaoLogout() {
   const accessToken = userInfo ? JSON.parse(userInfo).accessToken : undefined;
   const ORIGINAL_URL = new URL(window.location.href).origin;
   const REST_API_KEY = process.env.REACT_APP_KAKAO_API_KEY;
-  const REDIRECT_URI = ORIGINAL_URL;
-  // const REDIRECT_URI = "https://bumstop.github.io/react_xexymix_clone/";
+  // const REDIRECT_URI = ORIGINAL_URL;
+  const REDIRECT_URI = "https://bumstop.github.io/react_xexymix_clone/";
   const CLIENT_ID_PARAMS = `client_id=${REST_API_KEY}`;
   const REDIRECT_URI_PARAMS = `logout_redirect_uri=${REDIRECT_URI}`;
   const kakaoURL = `https://kauth.kakao.com/oauth/logout?${CLIENT_ID_PARAMS}&${REDIRECT_URI_PARAMS}`;
