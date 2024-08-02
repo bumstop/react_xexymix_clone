@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // 카카오 로그아웃
 export function KakaoLogout() {
@@ -9,7 +9,7 @@ export function KakaoLogout() {
 
   // const REDIRECT_URI = "http://localhost:3000"; // 빌드시 아래와 스위치 할것
   const REDIRECT_URI = "https://bumstop.github.io/react_xexymix_clone/";
-  
+
   const CLIENT_ID_PARAMS = `client_id=${REST_API_KEY}`;
   const REDIRECT_URI_PARAMS = `logout_redirect_uri=${REDIRECT_URI}`;
   const kakaoURL = `https://kauth.kakao.com/oauth/logout?${CLIENT_ID_PARAMS}&${REDIRECT_URI_PARAMS}`;
@@ -62,6 +62,7 @@ export function KakaoLogout() {
 }
 
 export function MyPage() {
+  const REDIRECT_URI = "https://bumstop.github.io/react_xexymix_clone/";
   const userInfo = localStorage.userInfo ? JSON.parse(localStorage.userInfo) : undefined;
   const userThumbnailImage = localStorage.userInfo ? userInfo.thumbnailImage : undefined;
   const userNickname = localStorage.userInfo ? userInfo.nickname : undefined;
@@ -80,6 +81,12 @@ export function MyPage() {
     "회원탈퇴",
   ];
 
+  useEffect(() => {
+    if (userInfo === undefined) {
+      window.alert("로그인 후 이용해주세요");
+      window.location.href = REDIRECT_URI;
+    }
+  }, []);
   return (
     <>
       <h2 className="mypage-title">마이페이지</h2>
